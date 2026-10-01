@@ -1,4 +1,4 @@
-# Online Open-World Wafer Defect Discovery using Hyperdimensional Computing
+# Online Open-World Wafer Defect Discovery using Hyperdimensional Computing [ASP-DAC'27]
 
 Code release for ASP-DAC 2027 paper: Online Open-World Wafer Defect Discovery using Hyperdimensional Computing
 
