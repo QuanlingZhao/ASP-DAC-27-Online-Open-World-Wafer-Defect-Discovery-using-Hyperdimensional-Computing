@@ -1,0 +1,11 @@
+# Save as .gitignore in the repo root
+.venv/
+__pycache__/
+*.npz
+*.pkl
+data/
+fake/
+results*/
+mri_feature_cache/
+aux_feature_cache*/
+stage1_stage2_binary_hdc*/

@@ -1,0 +1,32 @@
+# Put this file in the root of your fork of Eric's repo, then run:  uv sync
+[project]
+name = "wafer-hdc-mri"
+version = "0.1.0"
+description = "WaferHDC (ASP-DAC'27) adapted to PI-CAI prostate MRI"
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "numpy",
+    "pandas",
+    "pillow",
+    "scipy",
+    "scikit-image",
+    "scikit-learn",
+    "torch",
+    "torchvision",
+    "SimpleITK",
+    "matplotlib",
+]
+
+[tool.uv]
+package = false   # a folder of scripts, not an installable package
+
+# CPU-only PyTorch: about 2 GB smaller than the default CUDA build. HDC needs no GPU.
+# If you later want the GPU build, delete the two sections below and run: uv sync
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }
+torchvision = { index = "pytorch-cpu" }
